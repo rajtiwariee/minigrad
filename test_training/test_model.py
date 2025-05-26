@@ -3,6 +3,8 @@ import random
 from minigrad.engine import Value
 from minigrad.neural_net import MLP
 import matplotlib.pyplot as plt
+from minigrad.visualize_nn import draw_dot
+
 #Test data
 xs = [
     [2.0, 3.0, 1.0],
@@ -57,6 +59,9 @@ print("\nTraining completed!")
 print("\nFinal predictions:")
 for i, (x, ygt) in enumerate(zip(xs, ys)):
     pred = model(x)
+    if i == len(xs) - 1:
+        dot = draw_dot(pred)
+        dot.render("test_training/final_prediction_graph", view=True)  # saves and opens final_prediction_graph.svg
     print(f"Sample {i+1}: Target={ygt.data:.1f}, Predicted={pred.data:.4f}")
 
 # Test with a new sample
@@ -70,3 +75,4 @@ plt.xlabel('Epochs')
 plt.ylabel('Loss')
 plt.savefig('test_training/loss_over_epochs.png', dpi=300, bbox_inches='tight')
 plt.show()
+

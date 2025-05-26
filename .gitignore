@@ -1,1 +1,7 @@
 .ipynb_checkpoints/*
+test_training/final_prediction_graph
+__pycache__/*
+__pycache__
+test_training/__pycache__/*
+test_training/__pycache__
+test_training/__pycache__/*.pyc
