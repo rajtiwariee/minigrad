@@ -147,9 +147,3 @@ Minigrad is not optimized for performance or large-scale use. It’s meant to:
 * **Demystify ****backpropagation** and **autograd**
 * Provide a minimal reference to study **MLP training**
 * **Help you ****build neural networks from scratch**
-
----
-
-## **📜 License**
-
-MIT License. Feel free to fork and extend!
